@@ -1,0 +1,128 @@
+.about_img {
+  width: 180px;
+  border-radius: 50%;
+  justify-self: center; 
+}
+
+.about_container {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  column-gap: 1.875rem;
+}
+
+.about_data {
+  padding: 1.875rem;
+  background-color: var(--container-color);
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.875rem;
+  align-items: flex-start;
+  position: relative;
+}
+
+.about_data::before {
+  content: '';
+  /* Wajib ada agar pseudo-element muncul */
+  width: 0;
+  /* Lebar segitiga = 0, pakai border untuk bentuk */
+  height: 0;
+  /* Tinggi segitiga = 0, pakai border untuk bentuk */
+
+  border-top: 10px solid transparent;
+  /* Atas segitiga */
+  border-bottom: 10px solid transparent;
+  /* Bawah segitiga */
+  border-right: 15px solid var(--container-color);
+  /* Warna dan arah segitiga */
+
+  position: absolute;
+  /* Agar bisa ditempatkan relatif ke container */
+  left: -0.93rem;
+  /* Geser ke kiri agar menempel di tepi container */
+  top: 20%;
+  /* Posisi vertikal 20% dari atas container */
+}
+
+.about_description {
+  margin-bottom: 1rem;
+  /* Jarak bawah agar tidak terlalu rapat */
+  text-align: justify;
+  /* Teks diratakan kiri-kanan */
+}
+
+.about_skills grid {
+  row-gap: 1.25rem;
+  /* Jarak antar baris skill */
+}
+
+.skills_titles {
+  display: flex;
+  /* Membuat judul skill berada dalam satu baris */
+  justify-content: space-between;
+  /* margin-bottom: 1rem; */
+  /* Memberi jarak rata antar elemen di kiri dan kanan */
+}
+
+.skills_name {
+  font-size: var(--normal-font-size);
+  /* Ukuran font normal dari variable */
+  font-weight: var(--font-medium);
+  margin-top: 0.25rem;
+  /* Ketebalan font medium dari variable */
+}
+
+.skills_number {
+  line-height: 2rem;
+  /* Jarak antar baris atau tinggi teks */
+}
+
+.skills_bar,
+.skills_percentage {
+  height: 5px;
+  margin-top: 0.5rem;
+  /* Tinggi bar */
+  border-radius: 0.25rem;
+  /* Membuat ujung bar membulat */
+}
+
+.skills_bar {
+  background-color: #f1f1f1;
+  /* Warna background bar (gelap) */
+}
+
+.skills_percentage {
+  display: block;
+
+}
+
+.htmlcss {
+  width: 90%;
+  background-color: rgb(237, 61, 79);
+}
+
+.javascript {
+  width: 80%;
+  background-color: rgb(79, 105, 175);
+}
+
+.reactjs {
+  width: 85%;
+  background-color: rgb(69, 208, 101);
+}
+
+.about_boxes {
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1.875rem;
+  margin-top: 4.25rem;
+}
+
+.about_box {
+  display: flex;
+  column-gap: 1.5rem;
+}
+
+.about_icon {
+  font-size: var(--h1-font-size);
+  color: #dedeea;
+}
